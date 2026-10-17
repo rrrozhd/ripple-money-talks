@@ -153,3 +153,45 @@ export interface EvalReport {
   metrics: EvalMetric[];
   runs: EvalRun[];
 }
+
+/* ---------- Demand shock (live backend: POST /api/demand-shock) ---------- */
+
+export interface MarketCrossCheck {
+  beta_on_company: number | null;
+  corr: number | null;
+  r2: number | null;
+  n_obs: number;
+  reliable: boolean;
+  implied_price_move_pct: number | null;
+}
+
+export interface ShockImpact {
+  supplier: Ticker;
+  sells_to: Ticker;
+  hops: number;
+  evidence_edge_ids: string[];
+  /** Share of the supplier's revenue from the customer; null when not disclosed. */
+  weight_used: number | null;
+  weight_assumed: boolean;
+  exposure_disclosed: boolean;
+  revenue_impact_pct: number | null;
+  market_cross_check: MarketCrossCheck | null;
+}
+
+export interface ShockResult {
+  tool: "demand_shock";
+  company: Ticker;
+  shock_pct: number;
+  assumptions: { max_hops: number; hop_decay: number; default_weight: number | null; note: string };
+  impacts: ShockImpact[];
+}
+
+export interface ShockResponse {
+  status: "success";
+  data: ShockResult;
+  /** LLM summary, or the error text when the model call failed (see ai_ok). */
+  ai_analysis: string;
+  ai_ok: boolean;
+  /** "synthetic" prices / "fallback" edges mean demo data, not filings or market prices. */
+  data_sources: { prices: "daily_prices.csv" | "synthetic"; edges: "edges.json" | "fallback" };
+}

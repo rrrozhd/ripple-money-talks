@@ -1,16 +1,37 @@
 // Single entry point for backend data.
 //
-// Set NEXT_PUBLIC_RIPPLE_API_URL to use the real backend; otherwise the UI runs on mock data.
-// Expected backend contract:
+// NEXT_PUBLIC_RIPPLE_API_URL points at the FastAPI backend (app.py). It currently serves
+//   POST {API}/api/demand-shock  body {company, shock_pct}  → ShockResponse   (live)
+// Ask, Graph and Evaluation stay on mock data until the backend adds:
 //   POST {API}/ask    body {question}   → NDJSON stream, one AgentEvent per line
 //   GET  {API}/graph                    → Graph
 //   GET  {API}/eval                     → EvalReport
+// Flip LIVE_AGENT to true once those exist.
 
-import type { AgentEvent, EvalReport, Graph } from "./types";
+import type { AgentEvent, EvalReport, Graph, ShockResponse } from "./types";
 
-const API = process.env.NEXT_PUBLIC_RIPPLE_API_URL?.replace(/\/$/, "");
+export const BACKEND_URL = process.env.NEXT_PUBLIC_RIPPLE_API_URL?.replace(/\/$/, "");
+const LIVE_AGENT = false;
+const API = LIVE_AGENT ? BACKEND_URL : undefined;
 
+/** True while Ask / Graph / Evaluation run on mock data. */
 export const usingMock = !API;
+
+export async function demandShock(company: string, shockPct: number, signal?: AbortSignal): Promise<ShockResponse> {
+  if (!BACKEND_URL) throw new Error("Backend not configured: set NEXT_PUBLIC_RIPPLE_API_URL in web/.env.local");
+  const res = await fetch(`${BACKEND_URL}/api/demand-shock`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ company, shock_pct: shockPct }),
+    signal,
+  });
+  if (!res.ok) {
+    const body = await res.json().catch(() => null);
+    const detail = typeof body?.detail === "string" ? body.detail : JSON.stringify(body?.detail ?? res.statusText);
+    throw new Error(`Backend error ${res.status}: ${detail}`);
+  }
+  return res.json();
+}
 
 export async function getGraph(): Promise<Graph> {
   if (!API) return (await import("./mock/graph")).MOCK_GRAPH;

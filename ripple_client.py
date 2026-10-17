@@ -10,6 +10,7 @@ from config import NICRRON_API_KEY, PRISM_API_KEY, PRISM_HOST, PRISM_PROJECT_ID
 
 NICRRON_BASE_URL = "https://api.nicrron.ai/v1"
 NICRRON_MODEL = "nicrron/auto"
+AGENT_FAILED_PREFIX = "Agent query failed:"
 
 def log_run_to_prism(
     model: str,
@@ -31,7 +32,7 @@ def log_run_to_prism(
         "agent_id": agent_id,
     }
     try:
-        requests.post(
+        res = requests.post(
             url,
             headers={
                 "X-PRISMtrace-Key": PRISM_API_KEY,
@@ -40,15 +41,18 @@ def log_run_to_prism(
             json=payload,
             timeout=10,
         )
+        if not res.ok:
+            print(f"Warning: PRISM rejected the trace ({res.status_code}): {res.text[:200]}")
     except requests.RequestException as exc:
         print(f"Warning: failed to log run to PRISM: {exc}")
 
 def run_agent_query(prompt: str, session_id: str, agent_id: str) -> str:
     """Call Nicrron, measure latency, and log the run to PRISM on success or failure."""
     input_messages = [{"role": "user", "content": prompt}]
-    client = OpenAI(api_key=NICRRON_API_KEY, base_url=NICRRON_BASE_URL)
     started = time.perf_counter()
     try:
+        # Inside the try: a missing key raises here, and callers should still get their data back.
+        client = OpenAI(api_key=NICRRON_API_KEY, base_url=NICRRON_BASE_URL)
         response = client.chat.completions.create(
             model=NICRRON_MODEL,
             messages=input_messages,
@@ -66,7 +70,7 @@ def run_agent_query(prompt: str, session_id: str, agent_id: str) -> str:
         return output_message
     except Exception as exc:
         latency_ms = int(round((time.perf_counter() - started) * 1000))
-        error_message = f"Agent query failed: {exc}"
+        error_message = f"{AGENT_FAILED_PREFIX} {exc}"
         log_run_to_prism(
             model=NICRRON_MODEL,
             input_messages=input_messages,

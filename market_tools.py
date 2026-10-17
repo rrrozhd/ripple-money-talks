@@ -64,8 +64,14 @@ def _ols(y: pd.Series, x: pd.Series) -> dict:
     corr = float(np.corrcoef(yv, xv)[0, 1])
     resid = yv - (alpha + beta * xv)
     stderr = float(math.sqrt(resid.var(ddof=2) / ((n - 1) * var_x))) if var_x > 0 else float("nan")
-    return {"n_obs": n, "beta": round(beta, 3), "alpha_daily": round(alpha, 6), "corr": round(corr, 3),
-            "r2": round(corr ** 2, 3), "beta_stderr": round(stderr, 3), "reliable": n >= MIN_OBS}
+
+    def num(x: float, nd: int):
+        # NaN/inf (e.g. a flat price series) is not valid JSON; report it as missing instead.
+        return round(x, nd) if math.isfinite(x) else None
+
+    return {"n_obs": n, "beta": num(beta, 3), "alpha_daily": num(alpha, 6), "corr": num(corr, 3),
+            "r2": num(corr ** 2, 3), "beta_stderr": num(stderr, 3),
+            "reliable": n >= MIN_OBS and math.isfinite(beta)}
 
 
 # tools

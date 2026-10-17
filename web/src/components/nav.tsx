@@ -7,6 +7,7 @@ import { usingMock } from "@/lib/api";
 const LINKS = [
   { href: "/", label: "Ask" },
   { href: "/graph", label: "Graph" },
+  { href: "/shock", label: "Shock" },
   { href: "/eval", label: "Evaluation" },
 ] as const;
 
@@ -50,7 +51,7 @@ export function Nav() {
           <span className="hidden font-mono md:inline">15 filers · latest 10-Ks · 1y daily prices</span>
           {usingMock && (
             <span
-              title="Set NEXT_PUBLIC_RIPPLE_API_URL to connect the real backend"
+              title="Ask, Graph and Evaluation use mock data until the backend serves /ask, /graph and /eval. Shock is live."
               className="rounded-full border border-dashed border-line-strong px-2 py-0.5 whitespace-nowrap sm:px-2.5 font-mono uppercase tracking-wider"
             >
               mock<span className="hidden sm:inline"> data</span>
