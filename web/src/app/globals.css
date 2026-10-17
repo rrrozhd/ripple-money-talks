@@ -1,0 +1,184 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #f6f4ef;
+  --surface: #ffffff;
+  --surface-2: #efece4;
+  --ink: #16181d;
+  --muted: #5b616d;
+  --faint: #8a8f99;
+  --line: #e2ded4;
+  --line-strong: #cfc9bc;
+
+  --accent: #0e6b55;
+  --accent-soft: #dcefe7;
+  --danger: #b4362c;
+  --danger-soft: #f8e4e1;
+  --highlight: #fff1b8;
+
+  /* Validated with dataviz validate_palette.js (light): all checks pass */
+  --rel-supplier: #2f66c9;
+  --rel-customer: #a97a00;
+  --rel-competitor: #c63a5a;
+  --rel-partner: #7656c4;
+
+  /* Sectors are muted so they never compete with relation hues on edges */
+  --glow-1: rgba(14, 107, 85, 0.2);
+  --glow-2: rgba(184, 140, 46, 0.18);
+  --grid-line: rgba(22, 24, 29, 0.05);
+  --grid-line-strong: rgba(22, 24, 29, 0.085);
+  --candle-up: rgba(14, 107, 85, 0.22);
+  --candle-down: rgba(180, 54, 44, 0.16);
+
+  --sec-semis: #4a5b78;
+  --sec-equipment: #3f7a6a;
+  --sec-hardware: #8a6a48;
+  --sec-external: #9aa0a8;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1114;
+    --surface: #161a1f;
+    --surface-2: #1d2228;
+    --ink: #ebe8e2;
+    --muted: #a0a6b1;
+    --faint: #6f7682;
+    --line: #2a3038;
+    --line-strong: #3a414b;
+
+    --accent: #4cc5a2;
+    --accent-soft: #15332b;
+    --danger: #f07a6c;
+    --danger-soft: #3a1e1b;
+    --highlight: #4a3f12;
+
+    /* dark: passes; customer↔competitor CVD ΔE 7.7, so competitor is also dashed + always labeled */
+    --rel-supplier: #5f8de2;
+    --rel-customer: #b08529;
+    --rel-competitor: #dc5f78;
+    --rel-partner: #957ae0;
+
+    --glow-1: rgba(76, 197, 162, 0.13);
+    --glow-2: rgba(214, 170, 80, 0.09);
+    --grid-line: rgba(235, 232, 226, 0.035);
+    --grid-line-strong: rgba(235, 232, 226, 0.06);
+    --candle-up: rgba(76, 197, 162, 0.2);
+    --candle-down: rgba(240, 122, 108, 0.15);
+
+    --sec-semis: #8fa3c4;
+    --sec-equipment: #7fb8a6;
+    --sec-hardware: #c4a37f;
+    --sec-external: #6f7682;
+  }
+}
+
+@theme inline {
+  --color-bg: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-line: var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-accent: var(--accent);
+  --color-accent-soft: var(--accent-soft);
+  --color-danger: var(--danger);
+  --color-danger-soft: var(--danger-soft);
+  --color-highlight: var(--highlight);
+
+  --font-sans: var(--font-plex-sans);
+  --font-mono: var(--font-plex-mono);
+  --font-serif: var(--font-newsreader);
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+}
+
+::selection {
+  background: var(--highlight);
+}
+
+/* Quote styling shared by memo, graph and claim cards */
+.filing-quote {
+  font-family: var(--font-newsreader), Georgia, serif;
+  font-style: italic;
+  line-height: 1.55;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+.pulse-dot {
+  animation: pulse-dot 1.2s ease-in-out infinite;
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: none; }
+}
+.fade-up {
+  animation: fade-up 0.25s ease-out both;
+}
+
+/* ---------- Backdrop ---------- */
+
+/* Ledger paper: fine 24px grid with a stronger line every 5 cells, fading toward the bottom */
+.backdrop-grid {
+  background-image:
+    linear-gradient(var(--grid-line-strong) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-strong) 1px, transparent 1px),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 100%);
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.55; transform: scale(0.94); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+.breathe {
+  animation: breathe 11s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+.breathe-late {
+  animation-duration: 14s;
+  animation-delay: -5s;
+}
+
+/* The tape drifts gently up and down, like a slow breath */
+@keyframes tape-float {
+  0%, 100% { transform: translateY(0); opacity: 0.9; }
+  50% { transform: translateY(-10px); opacity: 1; }
+}
+.backdrop-tape {
+  animation: tape-float 12s ease-in-out infinite;
+}
+
+@keyframes draw-line {
+  from { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  to { stroke-dasharray: 1; stroke-dashoffset: 0; }
+}
+.draw-line {
+  animation: draw-line 2.4s ease-out both;
+}
+
+@keyframes ripple-ring {
+  0% { r: 4; stroke-opacity: 0.55; stroke-width: 1.5; }
+  100% { r: 38; stroke-opacity: 0; stroke-width: 0.5; }
+}
+.ripple-ring {
+  animation: ripple-ring 4s ease-out infinite;
+}
+.ripple-ring-late {
+  animation-delay: 2s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pulse-dot, .fade-up, .breathe, .backdrop-tape, .draw-line, .ripple-ring { animation: none; }
+}
