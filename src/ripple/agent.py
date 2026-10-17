@@ -8,6 +8,7 @@
 """
 
 import json
+import math
 import re
 from functools import lru_cache
 from typing import Optional
@@ -68,7 +69,8 @@ def graph_v2() -> list[dict]:
             continue
         src, dst, typ = to_edge({**c, "relation": lab})
         rows.append({"src": src, "dst": dst, "type": typ, "filer": c["filer"], "stated_by": names[c["filer"]], "quote": c["quote"],
-                     "source_link": c["link"], "share": c["weight"] if typ == "SUPPLIES" and lab == "customer" else None})
+                     "source_link": c["link"], "share": c["weight"] if typ == "SUPPLIES" and lab == "customer" else None,
+                     "share_kind": c["weight_kind"] if typ == "SUPPLIES" and lab == "customer" else None})
     return rows
 
 
@@ -129,25 +131,68 @@ def sector_stats(company: str) -> str:
                        "source": "Yahoo daily adjusted closes, data/raw/prices_yahoo.csv"})
 
 
+def _share(v) -> Optional[float]:
+    """Disclosed revenue share, or None. Missing shares come out of DuckDB/pandas as NaN, which is truthy."""
+    return float(v) if isinstance(v, (int, float)) and math.isfinite(v) and v > 0 else None
+
+
+def shock_impacts(company: str, demand_drop_pct: float) -> dict:
+    """Suppliers of `company` from the verified graph, with revenue at risk if it cuts purchases by demand_drop_pct %.
+    Revenue at risk = supplier revenue (SEC XBRL) x the share of it the supplier's 10-K attributes to this customer
+    x the cut. Quantified only where that share is disclosed; one row per supplier, preferring a disclosed share."""
+    eid = _resolve(company)
+    con, names, _ = _db()
+    if eid is None:
+        return {"company": None, "query": company, "drop_pct": demand_drop_pct, "suppliers": []}
+    cur = con.cursor()
+    rev = {t: (v, concept, period) for t, concept, v, period in cur.execute("SELECT ticker, concept, value, period_end FROM revenue").fetchall()}
+    sector = {t: (sec, b, c) for t, sec, b, c in cur.execute("SELECT ticker, sector, beta, corr FROM sector_edge").fetchall()}
+    best: dict[str, dict] = {}
+    for e in graph_v2():
+        if e["type"] != "SUPPLIES" or e["dst"] != eid or e["src"] == eid:
+            continue
+        sup, share = e["src"], _share(e["share"])
+        if sup in best and (best[sup]["revenue_share"] is not None or share is None):
+            continue  # keep the first evidence, upgraded only by a quote that discloses a share
+        row = {"supplier": sup, "name": names[sup], "stated_by": e["stated_by"], "quote": e["quote"],
+               "source_link": e["source_link"], "revenue_share": share,
+               "share_kind": e.get("share_kind") if share is not None else None,
+               "supplier_revenue_usd": None, "revenue_period_end": None, "revenue_at_risk_usd": None,
+               "sector": None, "beta": None, "corr": None}
+        if sup in rev:
+            v, _, period = rev[sup]
+            row |= {"supplier_revenue_usd": int(v), "revenue_period_end": str(period)}
+            if share is not None:
+                row["revenue_at_risk_usd"] = round(v * share * demand_drop_pct / 100)
+        if sup in sector:
+            sec, b, c = sector[sup]
+            row |= {"sector": sec, "beta": round(b, 2), "corr": round(c, 2)}
+        best[sup] = row
+    rows = sorted(best.values(), key=lambda r: (r["revenue_at_risk_usd"] is None, -(r["revenue_at_risk_usd"] or 0), r["name"]))
+    buyer_rev = rev.get(eid)
+    return {"company": eid, "name": names[eid], "drop_pct": demand_drop_pct,
+            "buyer_revenue_usd": int(buyer_rev[0]) if buyer_rev else None,
+            "total_at_risk_usd": sum(r["revenue_at_risk_usd"] or 0 for r in rows),
+            "quantified": sum(r["revenue_at_risk_usd"] is not None for r in rows), "suppliers": rows}
+
+
 @tool
 def shock(company: str, demand_drop_pct: float) -> str:
     """Demand shock: if `company` cuts purchases by demand_drop_pct %, estimate revenue at risk for its suppliers.
     Only quantified where a supplier's filing discloses this customer's revenue share; others are listed unquantified."""
-    eid = _resolve(company)
-    con, names, _ = _db()
-    rev = dict(con.cursor().execute("SELECT ticker, value FROM revenue").fetchall())
+    r = shock_impacts(company, demand_drop_pct)
+    if not r["suppliers"]:
+        return json.dumps({"result": f"no suppliers of {r.get('name') or company} in the graph"})
     out = []
-    for e in graph_v2():
-        if e["type"] != "SUPPLIES" or e["dst"] != eid:
-            continue
-        item = {"supplier": names[e["src"]], "source_link": e["source_link"]}
-        if e["share"] and e["src"] in rev:
-            item |= {"revenue_share": e["share"], "supplier_revenue_usd": rev[e["src"]],
-                     "revenue_at_risk_usd": round(rev[e["src"]] * e["share"] * demand_drop_pct / 100)}
+    for s in r["suppliers"]:
+        item = {"supplier": s["name"], "source_link": s["source_link"]}
+        if s["revenue_at_risk_usd"] is not None:
+            item |= {"revenue_share": s["revenue_share"], "supplier_revenue_usd": s["supplier_revenue_usd"],
+                     "revenue_at_risk_usd": s["revenue_at_risk_usd"]}
         else:
             item["revenue_at_risk_usd"] = "not quantified: no disclosed revenue share"
         out.append(item)
-    return json.dumps(out or {"result": f"no suppliers of {names.get(eid, company)} in the graph"})
+    return json.dumps(out)
 
 
 @tool
