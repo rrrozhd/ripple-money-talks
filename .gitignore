@@ -1,0 +1,8 @@
+.env
+data/
+.venv/
+__pycache__/
+node_modules/
+web/dist/
+.pytest_cache/
+.code-review-graph/

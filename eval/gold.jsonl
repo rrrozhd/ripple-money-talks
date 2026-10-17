@@ -1,0 +1,24 @@
+{"id": "q01", "q": "According to NVIDIA's 10-K, who supplies NVIDIA?", "company": "NVDA", "rel": "suppliers", "gold": ["x:tsmc", "x:samsung", "x:foxconn"]}
+{"id": "q02", "q": "According to NVIDIA's 10-K, who competes with NVIDIA?", "company": "NVDA", "rel": "competitors", "gold": ["AMD", "INTC", "QCOM", "HPE", "x:broadcom", "x:samsung", "x:amazon", "x:microsoft", "x:google"]}
+{"id": "q03", "q": "According to AMD's 10-K, who manufactures AMD's wafers?", "company": "AMD", "rel": "suppliers", "gold": ["x:tsmc", "x:globalfoundries", "x:umc"]}
+{"id": "q04", "q": "According to AMD's 10-K, which listed companies buy from AMD?", "company": "AMD", "rel": "customers", "gold": ["x:microsoft"]}
+{"id": "q05", "q": "According to AMD's 10-K, who competes with AMD?", "company": "AMD", "rel": "competitors", "gold": ["INTC", "NVDA", "QCOM", "x:broadcom"]}
+{"id": "q06", "q": "According to Intel's 10-K, who competes with Intel?", "company": "INTC", "rel": "competitors", "gold": ["AMD", "NVDA", "AAPL", "QCOM", "x:tsmc", "x:samsung", "x:broadcom", "x:globalfoundries", "x:umc", "x:amazon", "x:google", "x:microsoft", "x:meta"]}
+{"id": "q07", "q": "According to Intel's 10-K, who is a sole-source supplier to Intel?", "company": "INTC", "rel": "suppliers", "gold": ["x:asml"]}
+{"id": "q08", "q": "According to Intel's 10-K, who does Intel partner with?", "company": "INTC", "rel": "partners", "gold": ["NVDA"]}
+{"id": "q09", "q": "According to Micron's 10-K, who competes with Micron?", "company": "MU", "rel": "competitors", "gold": ["x:samsung", "x:skhynix"]}
+{"id": "q10", "q": "According to Lam Research's 10-K, who are Lam's most significant customers?", "company": "LRCX", "rel": "customers", "gold": ["MU", "x:samsung", "x:skhynix", "x:tsmc"]}
+{"id": "q11", "q": "According to Lam Research's 10-K, who competes with Lam?", "company": "LRCX", "rel": "competitors", "gold": ["AMAT", "x:tel"]}
+{"id": "q12", "q": "According to KLA's 10-K, who competes with KLA?", "company": "KLAC", "rel": "competitors", "gold": ["AMAT", "x:asml"]}
+{"id": "q13", "q": "According to KLA's 10-K, which customer exceeds 10% of revenue?", "company": "KLAC", "rel": "customers", "gold": ["x:tsmc"]}
+{"id": "q14", "q": "According to Entegris's 10-K, who is its top named customer?", "company": "ENTG", "rel": "customers", "gold": ["x:tsmc"]}
+{"id": "q15", "q": "According to Qualcomm's 10-K, who are its primary foundry suppliers?", "company": "QCOM", "rel": "suppliers", "gold": ["x:tsmc", "x:samsung", "x:globalfoundries"]}
+{"id": "q16", "q": "According to Qualcomm's 10-K, which named customers each exceed 10% of revenue?", "company": "QCOM", "rel": "customers", "gold": ["AAPL", "x:samsung"]}
+{"id": "q17", "q": "According to Qualcomm's 10-K, who competes with Qualcomm?", "company": "QCOM", "rel": "competitors", "gold": ["AAPL", "NVDA", "x:samsung", "x:broadcom"]}
+{"id": "q18", "q": "According to HP Inc.'s 10-K, who supplies HP Inc.?", "company": "HPQ", "rel": "suppliers", "gold": ["INTC", "AMD", "NVDA", "x:microsoft", "x:google"]}
+{"id": "q19", "q": "According to HP Inc.'s 10-K, who competes with HP Inc.?", "company": "HPQ", "rel": "competitors", "gold": ["AAPL", "DELL", "x:microsoft", "x:samsung"]}
+{"id": "q20", "q": "According to HPE's 10-K, who competes with HPE?", "company": "HPE", "rel": "competitors", "gold": ["DELL", "SMCI", "x:broadcom", "x:amazon", "x:google", "x:microsoft"]}
+{"id": "q21", "q": "According to HPE's 10-K, who are HPE's single-source suppliers?", "company": "HPE", "rel": "suppliers", "gold": ["INTC", "AMD", "NVDA", "x:broadcom"]}
+{"id": "q22", "q": "According to Supermicro's 10-K, who competes with Supermicro?", "company": "SMCI", "rel": "competitors", "gold": ["DELL", "HPE", "x:foxconn"]}
+{"id": "q23", "q": "According to Supermicro's 10-K, who supplies Supermicro?", "company": "SMCI", "rel": "suppliers", "gold": ["NVDA", "MU"]}
+{"id": "q24", "q": "According to Apple's 10-K, which listed company pays Apple licensing revenue?", "company": "AAPL", "rel": "customers", "gold": ["x:google"]}
