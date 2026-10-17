@@ -225,6 +225,35 @@ def graph_data():
             "sector_links": [{"ticker": t, "sector": s, "beta": round(b, 2), "corr": round(c, 2)} for t, s, b, c in sectors]}
 
 
+class ShockBody(BaseModel):
+    company: str
+    drop_pct: float
+
+
+@app.post("/api/shock")
+def shock_api(body: ShockBody):
+    """Revenue at risk for a company's suppliers if it cuts purchases by drop_pct % (same logic as the agent's shock tool)."""
+    from .agent import shock_impacts
+    if not 0 < body.drop_pct <= 100:
+        raise HTTPException(400, "drop_pct must be between 0 and 100")
+    r = shock_impacts(body.company, body.drop_pct)
+    if r["company"] is None:
+        raise HTTPException(404, f"unknown company: {body.company}")
+    return r
+
+
+@app.get("/api/shock/buyers")
+def shock_buyers():
+    """Companies that have at least one supplier in the verified graph, most suppliers first."""
+    from .agent import _db, graph_v2
+    _, names, _ = _db()
+    count: dict[str, set] = {}
+    for e in graph_v2():
+        if e["type"] == "SUPPLIES" and e["src"] != e["dst"]:
+            count.setdefault(e["dst"], set()).add(e["src"])
+    return sorted(({"id": k, "name": names[k], "suppliers": len(v)} for k, v in count.items()), key=lambda x: -x["suppliers"])
+
+
 @app.get("/api/proofs")
 def proofs():
     import httpx

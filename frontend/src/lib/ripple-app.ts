@@ -17,6 +17,8 @@ import type {
   Relation,
   Sector,
   SectorStats,
+  ShockBuyer,
+  ShockResult,
 } from "./types";
 
 const BASE = "/rapi";
@@ -85,6 +87,24 @@ export async function getGraph(): Promise<Graph> {
 
   const stats: SectorStats[] = raw.sector_links.map((s) => ({ ticker: s.ticker, sector: s.sector, beta: s.beta, correlation: s.corr }));
   return { companies, edges, stats, asOf: "live" };
+}
+
+/* ---------- demand shock ---------- */
+
+export const getShockBuyers = () => get<ShockBuyer[]>("/shock/buyers");
+
+export async function runShock(company: string, dropPct: number, signal?: AbortSignal): Promise<ShockResult> {
+  const res = await fetch(`${BASE}/shock`, {
+    method: "POST",
+    headers: { "content-type": "application/json" },
+    body: JSON.stringify({ company, drop_pct: dropPct }),
+    signal,
+  });
+  if (!res.ok) {
+    const body = await res.json().catch(() => null);
+    throw new Error(typeof body?.detail === "string" ? body.detail : `POST /shock failed: ${res.status}`);
+  }
+  return res.json();
 }
 
 /* ---------- evaluation ---------- */

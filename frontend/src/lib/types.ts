@@ -181,44 +181,39 @@ export interface EvalReport {
   prism?: PrismStatus;
 }
 
-/* ---------- Demand shock (live backend: POST /api/demand-shock) ---------- */
+/* ---------- Demand shock (Ripple API: POST /api/shock) ---------- */
 
-export interface MarketCrossCheck {
-  beta_on_company: number | null;
-  corr: number | null;
-  r2: number | null;
-  n_obs: number;
-  reliable: boolean;
-  implied_price_move_pct: number | null;
-}
-
-export interface ShockImpact {
+export interface ShockSupplier {
   supplier: Ticker;
-  sells_to: Ticker;
-  hops: number;
-  evidence_edge_ids: string[];
-  /** Share of the supplier's revenue from the customer; null when not disclosed. */
-  weight_used: number | null;
-  weight_assumed: boolean;
-  exposure_disclosed: boolean;
-  revenue_impact_pct: number | null;
-  market_cross_check: MarketCrossCheck | null;
+  name: string;
+  /** Filer whose 10-K states the link. */
+  stated_by: string;
+  quote: string;
+  source_link: string;
+  /** Share of the supplier's revenue from this customer, when its 10-K discloses it (0–1). */
+  revenue_share: number | null;
+  /** "exact", or "lower_bound" when the filing only says "10% or more". */
+  share_kind: string | null;
+  supplier_revenue_usd: number | null;
+  revenue_period_end: string | null;
+  revenue_at_risk_usd: number | null;
+  sector: Sector | null;
+  beta: number | null;
+  corr: number | null;
 }
 
 export interface ShockResult {
-  tool: "demand_shock";
   company: Ticker;
-  shock_pct: number;
-  assumptions: { max_hops: number; hop_decay: number; default_weight: number | null; note: string };
-  impacts: ShockImpact[];
+  name: string;
+  drop_pct: number;
+  buyer_revenue_usd: number | null;
+  total_at_risk_usd: number;
+  quantified: number;
+  suppliers: ShockSupplier[];
 }
 
-export interface ShockResponse {
-  status: "success";
-  data: ShockResult;
-  /** LLM summary, or the error text when the model call failed (see ai_ok). */
-  ai_analysis: string;
-  ai_ok: boolean;
-  /** "synthetic" prices / "fallback" edges mean demo data, not filings or market prices. */
-  data_sources: { prices: "daily_prices.csv" | "synthetic"; edges: "edges.json" | "fallback" };
+export interface ShockBuyer {
+  id: Ticker;
+  name: string;
+  suppliers: number;
 }

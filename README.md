@@ -23,5 +23,5 @@ Set `SEC_USER_AGENT="Your Name you@example.com"` before downloading; SEC asks fo
 
 ## Next.js frontend
 
-`frontend/` is a second UI (Next.js) on the same API as `web/`: ask the agent, explore the graph, compare versions.
+`frontend/` is a second UI (Next.js) on the same API as `web/`: ask the agent, explore the graph, run a demand shock, compare versions.
 Start the API with `uv run uvicorn ripple.web:app --port 8000`, then see `frontend/README.md`.

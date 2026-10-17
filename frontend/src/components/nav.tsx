@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BACKEND_URL, usingMock } from "@/lib/api";
+import { usingMock } from "@/lib/api";
 
 const LINKS = [
   { href: "/", label: "Ask" },
   { href: "/graph", label: "Graph" },
-  // Shock needs the separate demand-shock service; hide it when that isn't configured.
-  ...(BACKEND_URL ? [{ href: "/shock", label: "Shock" }] : []),
+  // Shock has no mock data; it appears once the Ripple API is configured.
+  ...(usingMock ? [] : [{ href: "/shock", label: "Shock" }]),
   { href: "/eval", label: "Evaluation" },
 ];
 
