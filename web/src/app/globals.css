@@ -151,23 +151,6 @@ body {
   animation-delay: -5s;
 }
 
-/* The tape drifts gently up and down, like a slow breath */
-@keyframes tape-float {
-  0%, 100% { transform: translateY(0); opacity: 0.9; }
-  50% { transform: translateY(-10px); opacity: 1; }
-}
-.backdrop-tape {
-  animation: tape-float 12s ease-in-out infinite;
-}
-
-@keyframes draw-line {
-  from { stroke-dasharray: 1; stroke-dashoffset: 1; }
-  to { stroke-dasharray: 1; stroke-dashoffset: 0; }
-}
-.draw-line {
-  animation: draw-line 2.4s ease-out both;
-}
-
 @keyframes ripple-ring {
   0% { r: 4; stroke-opacity: 0.55; stroke-width: 1.5; }
   100% { r: 38; stroke-opacity: 0; stroke-width: 0.5; }
@@ -180,5 +163,5 @@ body {
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .pulse-dot, .fade-up, .breathe, .backdrop-tape, .draw-line, .ripple-ring { animation: none; }
+  .pulse-dot, .fade-up, .breathe, .ripple-ring { animation: none; }
 }

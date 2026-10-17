@@ -24,7 +24,7 @@ export function Nav() {
   const pathname = usePathname();
   return (
     <header className="sticky top-0 z-30 border-b border-line bg-bg/85 backdrop-blur">
-      <div className="mx-auto flex h-14 max-w-[1400px] items-center gap-3 px-4 sm:gap-6 sm:px-6">
+      <div className="mx-auto flex h-14 max-w-[1600px] items-center gap-3 px-4 sm:gap-6 sm:px-8 lg:px-12 xl:px-16">
         <Link href="/" className="flex items-center gap-2 text-ink">
           <Logo className="h-6 w-6 text-accent" />
           <span className="font-serif text-xl tracking-tight">Ripple</span>

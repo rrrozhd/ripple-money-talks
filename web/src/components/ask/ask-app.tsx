@@ -23,6 +23,13 @@ const TOOLS = [
   ["verifier", "Rejects any claim whose quote isn't word for word in a filing"],
 ] as const;
 
+// Headline results from the README's evaluation table.
+const STATS = [
+  ["15", "US tech filers covered"],
+  ["84%", "claims backed by an exact quote"],
+  ["−29%", "time per question vs plain RAG"],
+] as const;
+
 export function AskApp() {
   const params = useSearchParams();
   const router = useRouter();
@@ -50,45 +57,63 @@ export function AskApp() {
 
   if (!q) {
     return (
-      <div className="mx-auto flex w-full max-w-3xl flex-1 flex-col justify-center px-4 py-16 sm:px-6">
-        <Logo className="h-10 w-10 text-accent" />
-        <h1 className="mt-6 font-serif text-4xl leading-[1.1] tracking-tight text-ink sm:text-5xl">
-          Who depends on whom?
-        </h1>
-        <p className="mt-4 max-w-xl text-[15px] leading-7 text-muted">
-          Ask about suppliers, customers, competitors and partners across 15 US tech companies. Every company Ripple names is backed by
-          the exact sentence from its 10-K.
-        </p>
-        <div className="mt-8">
-          <AskBox size="lg" onSubmit={submit} autoFocus />
-        </div>
-        <ul className="mt-4 grid gap-2 sm:grid-cols-3">
-          {EXAMPLES.map((e) => (
-            <li key={e.q}>
-              <button
-                onClick={() => submit(e.q)}
-                className="group flex h-full w-full flex-col rounded-lg border border-line bg-surface p-3 text-left transition-colors hover:border-line-strong"
-              >
-                <span className="text-[11px] font-medium tracking-wider text-faint uppercase">{e.tag}</span>
-                <span className="mt-1 flex-1 text-sm leading-5 text-ink">{e.q}</span>
-                <ArrowRight className="mt-2 h-3.5 w-3.5 text-faint transition-transform group-hover:translate-x-0.5 group-hover:text-accent" />
-              </button>
-            </li>
-          ))}
-        </ul>
+      // Two panes across the full width: ask on the left, how it works on the right.
+      <div className="mx-auto grid w-full max-w-[1600px] flex-1 items-center gap-10 px-4 py-12 sm:px-8 lg:min-h-[calc(100vh-3.5rem)] lg:grid-cols-[minmax(0,1.15fr)_minmax(0,1fr)] lg:gap-16 lg:px-12 xl:gap-24 xl:px-16">
+        <section>
+          <Logo className="h-11 w-11 text-accent" />
+          <h1 className="mt-6 font-serif text-4xl leading-[1.05] tracking-tight text-ink sm:text-5xl xl:text-6xl">Who depends on whom?</h1>
+          <p className="mt-5 max-w-xl text-base leading-7 text-muted">
+            Ask about suppliers, customers, competitors and partners across 15 US tech companies. Every company Ripple names is backed by
+            the exact sentence from its 10-K.
+          </p>
+          <div className="mt-8">
+            <AskBox size="lg" onSubmit={submit} autoFocus />
+          </div>
+          <ul className="mt-4 grid gap-3 sm:grid-cols-3">
+            {EXAMPLES.map((e) => (
+              <li key={e.q}>
+                <button
+                  onClick={() => submit(e.q)}
+                  className="group flex h-full w-full flex-col rounded-xl border border-line bg-surface/50 p-4 text-left backdrop-blur-sm transition-colors hover:border-line-strong hover:bg-surface/70"
+                >
+                  <span className="text-[11px] font-semibold tracking-wider text-muted uppercase">{e.tag}</span>
+                  <span className="mt-1.5 flex-1 text-sm leading-5 font-semibold text-ink">{e.q}</span>
+                  <ArrowRight className="mt-3 h-3.5 w-3.5 text-faint transition-transform group-hover:translate-x-0.5 group-hover:text-accent" />
+                </button>
+              </li>
+            ))}
+          </ul>
+        </section>
 
-        {/* Sits on a frosted panel so the backdrop chart never runs through the text */}
-        <div className="mt-14 rounded-2xl border border-line bg-surface/80 p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04)] backdrop-blur-md sm:p-6">
-          <h2 className="text-xs font-semibold tracking-wider text-muted uppercase">How the agent works</h2>
-          <dl className="mt-4 grid gap-x-10 gap-y-5 sm:grid-cols-2">
-            {TOOLS.map(([name, desc]) => (
-              <div key={name}>
-                <dt className="font-mono text-sm leading-6 font-medium text-accent">{name}</dt>
-                <dd className="mt-0.5 text-[15px] leading-6 text-ink/85">{desc}</dd>
+        <aside className="space-y-4">
+          <dl className="grid grid-cols-3 gap-3">
+            {STATS.map(([value, label]) => (
+              <div key={label} className="rounded-xl border border-line bg-surface/50 p-4 backdrop-blur-sm">
+                <dt className="sr-only">{label}</dt>
+                <dd className="font-serif text-3xl leading-none text-ink">{value}</dd>
+                <dd className="mt-2 text-xs leading-4 font-medium text-muted">{label}</dd>
               </div>
             ))}
           </dl>
-        </div>
+
+          {/* Frosted panel so the backdrop chart never runs through the text */}
+          <div className="rounded-2xl border border-line bg-surface/50 p-6 shadow-[0_1px_2px_rgba(0,0,0,0.04)] backdrop-blur-md">
+            <h2 className="text-xs font-bold tracking-wider text-muted uppercase">How the agent works</h2>
+            <ol className="relative mt-5 space-y-5 before:absolute before:top-3 before:bottom-3 before:left-[11px] before:w-px before:bg-line-strong">
+              {TOOLS.map(([name, desc], i) => (
+                <li key={name} className="relative flex gap-4">
+                  <span className="z-10 flex h-6 w-6 shrink-0 items-center justify-center rounded-full border border-line-strong bg-surface font-mono text-[11px] font-semibold text-accent">
+                    {i + 1}
+                  </span>
+                  <div>
+                    <p className="font-mono text-sm leading-6 font-semibold text-accent">{name}</p>
+                    <p className="mt-0.5 text-[15px] leading-6 font-medium text-ink/90">{desc}</p>
+                  </div>
+                </li>
+              ))}
+            </ol>
+          </div>
+        </aside>
       </div>
     );
   }
