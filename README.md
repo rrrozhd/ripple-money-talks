@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.svg" alt="Ripple" width="220">
+</p>
+
 # Ripple: starter graph
 
 3 sectors × 5 companies (semis, semi equipment, hardware) in one DuckDB file, with every link traceable to its source.
