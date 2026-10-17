@@ -23,6 +23,13 @@
   --rel-partner: #7656c4;
 
   /* Sectors are muted so they never compete with relation hues on edges */
+  --glow-1: rgba(14, 107, 85, 0.2);
+  --glow-2: rgba(184, 140, 46, 0.18);
+  --grid-line: rgba(22, 24, 29, 0.05);
+  --grid-line-strong: rgba(22, 24, 29, 0.085);
+  --candle-up: rgba(14, 107, 85, 0.22);
+  --candle-down: rgba(180, 54, 44, 0.16);
+
   --sec-semis: #4a5b78;
   --sec-equipment: #3f7a6a;
   --sec-hardware: #8a6a48;
@@ -51,6 +58,13 @@
     --rel-customer: #b08529;
     --rel-competitor: #dc5f78;
     --rel-partner: #957ae0;
+
+    --glow-1: rgba(76, 197, 162, 0.13);
+    --glow-2: rgba(214, 170, 80, 0.09);
+    --grid-line: rgba(235, 232, 226, 0.035);
+    --grid-line-strong: rgba(235, 232, 226, 0.06);
+    --candle-up: rgba(76, 197, 162, 0.2);
+    --candle-down: rgba(240, 122, 108, 0.15);
 
     --sec-semis: #8fa3c4;
     --sec-equipment: #7fb8a6;
@@ -111,6 +125,60 @@ body {
   animation: fade-up 0.25s ease-out both;
 }
 
+/* ---------- Backdrop ---------- */
+
+/* Ledger paper: fine 24px grid with a stronger line every 5 cells, fading toward the bottom */
+.backdrop-grid {
+  background-image:
+    linear-gradient(var(--grid-line-strong) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line-strong) 1px, transparent 1px),
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 120px 120px, 120px 120px, 24px 24px, 24px 24px;
+  mask-image: radial-gradient(ellipse 90% 70% at 50% 0%, black 30%, transparent 100%);
+}
+
+@keyframes breathe {
+  0%, 100% { opacity: 0.55; transform: scale(0.94); }
+  50% { opacity: 1; transform: scale(1.06); }
+}
+.breathe {
+  animation: breathe 11s ease-in-out infinite;
+  will-change: transform, opacity;
+}
+.breathe-late {
+  animation-duration: 14s;
+  animation-delay: -5s;
+}
+
+/* The tape drifts gently up and down, like a slow breath */
+@keyframes tape-float {
+  0%, 100% { transform: translateY(0); opacity: 0.9; }
+  50% { transform: translateY(-10px); opacity: 1; }
+}
+.backdrop-tape {
+  animation: tape-float 12s ease-in-out infinite;
+}
+
+@keyframes draw-line {
+  from { stroke-dasharray: 1; stroke-dashoffset: 1; }
+  to { stroke-dasharray: 1; stroke-dashoffset: 0; }
+}
+.draw-line {
+  animation: draw-line 2.4s ease-out both;
+}
+
+@keyframes ripple-ring {
+  0% { r: 4; stroke-opacity: 0.55; stroke-width: 1.5; }
+  100% { r: 38; stroke-opacity: 0; stroke-width: 0.5; }
+}
+.ripple-ring {
+  animation: ripple-ring 4s ease-out infinite;
+}
+.ripple-ring-late {
+  animation-delay: 2s;
+}
+
 @media (prefers-reduced-motion: reduce) {
-  .pulse-dot, .fade-up { animation: none; }
+  .pulse-dot, .fade-up, .breathe, .backdrop-tape, .draw-line, .ripple-ring { animation: none; }
 }

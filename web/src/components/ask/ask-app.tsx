@@ -77,13 +77,14 @@ export function AskApp() {
           ))}
         </ul>
 
-        <div className="mt-14 border-t border-line pt-6">
-          <h2 className="text-[11px] font-medium tracking-wider text-faint uppercase">How the agent works</h2>
-          <dl className="mt-3 grid gap-x-8 gap-y-3 sm:grid-cols-2">
+        {/* Sits on a frosted panel so the backdrop chart never runs through the text */}
+        <div className="mt-14 rounded-2xl border border-line bg-surface/80 p-5 shadow-[0_1px_2px_rgba(0,0,0,0.04)] backdrop-blur-md sm:p-6">
+          <h2 className="text-xs font-semibold tracking-wider text-muted uppercase">How the agent works</h2>
+          <dl className="mt-4 grid gap-x-10 gap-y-5 sm:grid-cols-2">
             {TOOLS.map(([name, desc]) => (
-              <div key={name} className="flex gap-3 text-sm">
-                <dt className="w-28 shrink-0 font-mono text-[12px] leading-5 text-ink">{name}</dt>
-                <dd className="text-muted">{desc}</dd>
+              <div key={name}>
+                <dt className="font-mono text-sm leading-6 font-medium text-accent">{name}</dt>
+                <dd className="mt-0.5 text-[15px] leading-6 text-ink/85">{desc}</dd>
               </div>
             ))}
           </dl>

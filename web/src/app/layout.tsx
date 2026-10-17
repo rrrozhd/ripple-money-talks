@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { IBM_Plex_Mono, IBM_Plex_Sans, Newsreader } from "next/font/google";
+import { Backdrop } from "@/components/backdrop";
 import { Nav } from "@/components/nav";
 import "./globals.css";
 
@@ -29,7 +30,8 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
     <html lang="en" className={`${plexSans.variable} ${plexMono.variable} ${newsreader.variable} h-full antialiased`}>
-      <body className="flex min-h-full flex-col font-sans">
+      <body className="relative isolate flex min-h-full flex-col font-sans">
+        <Backdrop />
         <Nav />
         <main className="flex flex-1 flex-col">{children}</main>
       </body>
