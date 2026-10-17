@@ -1,0 +1,72 @@
+v1 q21 4 claims 32.0 s
+v1 q20 6 claims 43.1 s
+v1 q22 7 claims 48.3 s
+v1 q19 16 claims 57.0 s
+v1 q23 3 claims 70.8 s
+v1 q24 1 claims 84.8 s
+v1 t05 11 claims 129.7 s
+v1 t02 9 claims 232.9 s
+v1 t04 13 claims 227.5 s
+v1 t03 5 claims 283.6 s
+v1 t01 2 claims 338.1 s
+v1 t10 0 claims 301.5 s
+v1 t08 0 claims 393.0 s
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+v1 t09 3 claims 433.2 s
+v1 t06 0 claims 652.7 s
+v1 t07 1 claims 732.1 s
+v1 t15 1 claims 296.5 s
+v1 t11 2 claims 710.2 s
+v1 t14 5 claims 369.0 s
+v1 t13 0 claims 420.8 s
+v1 t17 5 claims 114.9 s
+v1 t12 3 claims 548.2 s
+v1 t19 error 135.8 s
+v1 t16 2 claims 290.3 s
+v1 t21 0 claims 192.3 s
+v1 t20 5 claims 259.3 s
+v1 t22 10 claims 262.5 s
+v1 t23 2 claims 226.3 s
+v1 t28 2 claims 89.9 s
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+v1 t25 2 claims 315.8 s
+v1 t18 1 claims 579.2 s
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+PRISMtrace notice: /api/knowledge-base/search did not answer within the timeout. The write may still have landed -- check before resending, and raise timeout= if this repeats.
+v1 t24 3 claims 672.3 s
+v1 t31 1 claims 268.8 s
+v1 t26 1 claims 587.9 s
+v1 t27 3 claims 607.3 s
+v1 t34 6 claims 171.0 s
+v1 t33 4 claims 265.3 s
+v1 t30 5 claims 538.5 s
+v1 t35 2 claims 177.7 s
+v1 t32 8 claims 363.3 s
+v1 t29 error 761.7 s
+v1 t36 2 claims 387.5 s

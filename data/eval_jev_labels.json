@@ -1,0 +1,684 @@
+{
+ "questions": 24,
+ "variants": {
+  "raw": {
+   "beam_score": 0.7291666666666666,
+   "mean_f1": 0.8070797258297259,
+   "micro_precision": 0.7840909090909091,
+   "micro_recall": 0.8518518518518519,
+   "per_question": {
+    "q01": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 3,
+     "pred_n": 3,
+     "gold_n": 3
+    },
+    "q02": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 9,
+     "pred_n": 9,
+     "gold_n": 9
+    },
+    "q03": {
+     "precision": 0.5,
+     "recall": 0.6666666666666666,
+     "f1": 0.5714285714285715,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 4,
+     "gold_n": 3
+    },
+    "q04": {
+     "precision": 0.3333333333333333,
+     "recall": 1.0,
+     "f1": 0.5,
+     "score": 0.5,
+     "hit": 1,
+     "pred_n": 3,
+     "gold_n": 1
+    },
+    "q05": {
+     "precision": 0.6666666666666666,
+     "recall": 1.0,
+     "f1": 0.8,
+     "score": 0.5,
+     "hit": 4,
+     "pred_n": 6,
+     "gold_n": 4
+    },
+    "q06": {
+     "precision": 1.0,
+     "recall": 0.8461538461538461,
+     "f1": 0.9166666666666666,
+     "score": 0.5,
+     "hit": 11,
+     "pred_n": 11,
+     "gold_n": 13
+    },
+    "q07": {
+     "precision": 0.1,
+     "recall": 1.0,
+     "f1": 0.18181818181818182,
+     "score": 0.5,
+     "hit": 1,
+     "pred_n": 10,
+     "gold_n": 1
+    },
+    "q08": {
+     "precision": 0.5,
+     "recall": 1.0,
+     "f1": 0.6666666666666666,
+     "score": 0.5,
+     "hit": 1,
+     "pred_n": 2,
+     "gold_n": 1
+    },
+    "q09": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q10": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 4,
+     "pred_n": 4,
+     "gold_n": 4
+    },
+    "q11": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q12": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q13": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q14": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q15": {
+     "precision": 1.0,
+     "recall": 0.6666666666666666,
+     "f1": 0.8,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 3
+    },
+    "q16": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q17": {
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.6666666666666666,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 4
+    },
+    "q18": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 5,
+     "pred_n": 5,
+     "gold_n": 5
+    },
+    "q19": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 4,
+     "pred_n": 4,
+     "gold_n": 4
+    },
+    "q20": {
+     "precision": 0.6666666666666666,
+     "recall": 1.0,
+     "f1": 0.8,
+     "score": 0.5,
+     "hit": 6,
+     "pred_n": 9,
+     "gold_n": 6
+    },
+    "q21": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "score": 0.0,
+     "hit": 0,
+     "pred_n": 0,
+     "gold_n": 4
+    },
+    "q22": {
+     "precision": 1.0,
+     "recall": 0.6666666666666666,
+     "f1": 0.8,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 3
+    },
+    "q23": {
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.6666666666666666,
+     "score": 0.5,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 2
+    },
+    "q24": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    }
+   }
+  },
+  "jev": {
+   "beam_score": 0.7083333333333334,
+   "mean_f1": 0.7957036019536018,
+   "micro_precision": 0.9538461538461539,
+   "micro_recall": 0.7654320987654321,
+   "per_question": {
+    "q01": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 3,
+     "pred_n": 3,
+     "gold_n": 3
+    },
+    "q02": {
+     "precision": 1.0,
+     "recall": 0.3333333333333333,
+     "f1": 0.5,
+     "score": 0.5,
+     "hit": 3,
+     "pred_n": 3,
+     "gold_n": 9
+    },
+    "q03": {
+     "precision": 1.0,
+     "recall": 0.6666666666666666,
+     "f1": 0.8,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 3
+    },
+    "q04": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q05": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 4,
+     "pred_n": 4,
+     "gold_n": 4
+    },
+    "q06": {
+     "precision": 1.0,
+     "recall": 0.8461538461538461,
+     "f1": 0.9166666666666666,
+     "score": 0.5,
+     "hit": 11,
+     "pred_n": 11,
+     "gold_n": 13
+    },
+    "q07": {
+     "precision": 0.3333333333333333,
+     "recall": 1.0,
+     "f1": 0.5,
+     "score": 0.5,
+     "hit": 1,
+     "pred_n": 3,
+     "gold_n": 1
+    },
+    "q08": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q09": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q10": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 4,
+     "pred_n": 4,
+     "gold_n": 4
+    },
+    "q11": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q12": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q13": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q14": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q15": {
+     "precision": 1.0,
+     "recall": 0.6666666666666666,
+     "f1": 0.8,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 3
+    },
+    "q16": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q17": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "score": 0.0,
+     "hit": 0,
+     "pred_n": 0,
+     "gold_n": 4
+    },
+    "q18": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 5,
+     "pred_n": 5,
+     "gold_n": 5
+    },
+    "q19": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 4,
+     "pred_n": 4,
+     "gold_n": 4
+    },
+    "q20": {
+     "precision": 0.8571428571428571,
+     "recall": 1.0,
+     "f1": 0.923076923076923,
+     "score": 0.5,
+     "hit": 6,
+     "pred_n": 7,
+     "gold_n": 6
+    },
+    "q21": {
+     "precision": 1.0,
+     "recall": 0.75,
+     "f1": 0.8571428571428571,
+     "score": 0.5,
+     "hit": 3,
+     "pred_n": 3,
+     "gold_n": 4
+    },
+    "q22": {
+     "precision": 1.0,
+     "recall": 0.6666666666666666,
+     "f1": 0.8,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 3
+    },
+    "q23": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "score": 0.0,
+     "hit": 0,
+     "pred_n": 0,
+     "gold_n": 2
+    },
+    "q24": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "score": 0.0,
+     "hit": 0,
+     "pred_n": 0,
+     "gold_n": 1
+    }
+   }
+  },
+  "reviewed": {
+   "beam_score": 0.8125,
+   "mean_f1": 0.8996323529411764,
+   "micro_precision": 1.0,
+   "micro_recall": 0.8395061728395061,
+   "per_question": {
+    "q01": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 3,
+     "pred_n": 3,
+     "gold_n": 3
+    },
+    "q02": {
+     "precision": 1.0,
+     "recall": 0.8888888888888888,
+     "f1": 0.9411764705882353,
+     "score": 0.5,
+     "hit": 8,
+     "pred_n": 8,
+     "gold_n": 9
+    },
+    "q03": {
+     "precision": 1.0,
+     "recall": 0.6666666666666666,
+     "f1": 0.8,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 3
+    },
+    "q04": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q05": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 4,
+     "pred_n": 4,
+     "gold_n": 4
+    },
+    "q06": {
+     "precision": 1.0,
+     "recall": 0.8461538461538461,
+     "f1": 0.9166666666666666,
+     "score": 0.5,
+     "hit": 11,
+     "pred_n": 11,
+     "gold_n": 13
+    },
+    "q07": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q08": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q09": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q10": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 4,
+     "pred_n": 4,
+     "gold_n": 4
+    },
+    "q11": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q12": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q13": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q14": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    },
+    "q15": {
+     "precision": 1.0,
+     "recall": 0.6666666666666666,
+     "f1": 0.8,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 3
+    },
+    "q16": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 2
+    },
+    "q17": {
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.6666666666666666,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 4
+    },
+    "q18": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 5,
+     "pred_n": 5,
+     "gold_n": 5
+    },
+    "q19": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 4,
+     "pred_n": 4,
+     "gold_n": 4
+    },
+    "q20": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 6,
+     "pred_n": 6,
+     "gold_n": 6
+    },
+    "q21": {
+     "precision": 0.0,
+     "recall": 0.0,
+     "f1": 0.0,
+     "score": 0.0,
+     "hit": 0,
+     "pred_n": 0,
+     "gold_n": 4
+    },
+    "q22": {
+     "precision": 1.0,
+     "recall": 0.6666666666666666,
+     "f1": 0.8,
+     "score": 0.5,
+     "hit": 2,
+     "pred_n": 2,
+     "gold_n": 3
+    },
+    "q23": {
+     "precision": 1.0,
+     "recall": 0.5,
+     "f1": 0.6666666666666666,
+     "score": 0.5,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 2
+    },
+    "q24": {
+     "precision": 1.0,
+     "recall": 1.0,
+     "f1": 1.0,
+     "score": 1.0,
+     "hit": 1,
+     "pred_n": 1,
+     "gold_n": 1
+    }
+   }
+  }
+ },
+ "jev_vs_review": {
+  "edges": 88,
+  "agreement": 0.8636363636363636,
+  "brier": 0.13835142045454546,
+  "ece": 0.11232954545454543,
+  "n": 88
+ }
+}

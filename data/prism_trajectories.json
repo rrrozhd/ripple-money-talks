@@ -1,0 +1,554 @@
+{
+ "v1:q01": {
+  "id": "7685845d-9166-4bff-a7f9-77931f64cee9",
+  "question": "According to NVIDIA's 10-K, who supplies NVIDIA?",
+  "scorecard": {
+   "overall_score": 83.11,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 60.0,
+   "passed": false
+  }
+ },
+ "v1:q03": {
+  "id": "180f68fd-e1af-4615-8597-51217f7fd95a",
+  "question": "According to AMD's 10-K, who manufactures AMD's wafers?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q04": {
+  "id": "89d53ce2-4290-42bd-80ae-050a1083ecd5",
+  "question": "According to AMD's 10-K, which listed companies buy from AMD?",
+  "scorecard": {
+   "overall_score": 77.07,
+   "correctness_score": 60.0,
+   "efficiency_score": 68.0,
+   "safety_score": 100.0,
+   "robustness_score": 60.0,
+   "passed": false
+  }
+ },
+ "v1:q05": {
+  "id": "de5e0d8c-55f3-4dd5-b764-36001d2bf881",
+  "question": "According to AMD's 10-K, who competes with AMD?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q07": {
+  "id": "ac999876-a2d7-46b9-b570-05688f7e8782",
+  "question": "According to Intel's 10-K, who is a sole-source supplier to Intel?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q08": {
+  "id": "19bdf175-0dee-4fa6-955f-8d933d3cc543",
+  "question": "According to Intel's 10-K, who does Intel partner with?",
+  "scorecard": {
+   "overall_score": 92.89,
+   "correctness_score": 86.67,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q09": {
+  "id": "b0491850-ecdf-4026-88a2-79989e61c905",
+  "question": "According to Micron's 10-K, who competes with Micron?",
+  "scorecard": {
+   "overall_score": 86.22,
+   "correctness_score": 66.67,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q10": {
+  "id": "8abacc6f-20d0-44a5-be3d-5ebecf2765e8",
+  "question": "According to Lam Research's 10-K, who are Lam's most significant customers?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q11": {
+  "id": "f9c1bf78-e698-4bf4-b445-5705e28c82ab",
+  "question": "According to Lam Research's 10-K, who competes with Lam?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q12": {
+  "id": "f8aeafab-1fa8-4663-a0df-90d9eb60fc93",
+  "question": "According to KLA's 10-K, who competes with KLA?",
+  "scorecard": {
+   "overall_score": 92.89,
+   "correctness_score": 86.67,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q13": {
+  "id": "9e327500-cff1-4aa6-b9be-ec619bebd254",
+  "question": "According to KLA's 10-K, which customer exceeds 10% of revenue?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q14": {
+  "id": "7d3d51b4-5188-4e95-90c4-b99fe3374545",
+  "question": "According to Entegris's 10-K, who is its top named customer?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q15": {
+  "id": "dd441020-3da7-4b87-bafe-b1030fc5ddd3",
+  "question": "According to Qualcomm's 10-K, who are its primary foundry suppliers?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q16": {
+  "id": "768557db-69fc-4e6d-84a4-fcbd4aac19d5",
+  "question": "According to Qualcomm's 10-K, which named customers each exceed 10% of revenue?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q17": {
+  "id": "0e8783e9-e97e-48bc-a55b-966404239b08",
+  "question": "According to Qualcomm's 10-K, who competes with Qualcomm?",
+  "scorecard": {
+   "overall_score": 92.89,
+   "correctness_score": 86.67,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q18": {
+  "id": "48d65d74-f1b0-4021-8e43-a5020f96b0f9",
+  "question": "According to HP Inc.'s 10-K, who supplies HP Inc.?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q19": {
+  "id": "6c61b3a2-f4ae-46a0-9027-27e0b9596f91",
+  "question": "According to HP Inc.'s 10-K, who competes with HP Inc.?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q21": {
+  "id": "8ef15e36-1009-40e4-b9b6-b71d486ab2ec",
+  "question": "According to HPE's 10-K, who are HPE's single-source suppliers?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q22": {
+  "id": "4ee11bea-6163-47c6-96ac-ab7e6bad3c10",
+  "question": "According to Supermicro's 10-K, who competes with Supermicro?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q23": {
+  "id": "5002e7b2-8cbe-4a54-bd68-1df57cb67456",
+  "question": "According to Supermicro's 10-K, who supplies Supermicro?",
+  "scorecard": {
+   "overall_score": 96.67,
+   "correctness_score": 86.67,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v1:q24": {
+  "id": "d3835e4a-0ebd-4c1d-bb79-7534c5d2f0c1",
+  "question": "According to Apple's 10-K, which listed company pays Apple licensing revenue?",
+  "scorecard": {
+   "overall_score": 87.33,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 60.0,
+   "passed": false
+  }
+ },
+ "v1:q06": {
+  "id": "30db19d4-3e30-4daf-9721-badf37a0d03f",
+  "question": "According to Intel's 10-K, who competes with Intel?",
+  "scorecard": {
+   "overall_score": 98.33,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q06": {
+  "id": "1dd36df4-885c-408a-9c9e-47b56aeffdee",
+  "question": "According to Intel's 10-K, who competes with Intel?",
+  "scorecard": {
+   "overall_score": 97.78,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q05": {
+  "id": "6521c962-545c-468c-bf44-acb31ad62599",
+  "question": "According to AMD's 10-K, who competes with AMD?",
+  "scorecard": {
+   "overall_score": 92.89,
+   "correctness_score": 86.67,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q04": {
+  "id": "22d52e9b-0f4f-4bde-8f7b-92862e58090e",
+  "question": "According to AMD's 10-K, which listed companies buy from AMD?",
+  "scorecard": {
+   "overall_score": 88.44,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q03": {
+  "id": "527c9f15-ca44-4fdb-b241-6a80cd0671f3",
+  "question": "According to AMD's 10-K, who manufactures AMD's wafers?",
+  "scorecard": {
+   "overall_score": 88.44,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q02": {
+  "id": "66e41239-7f8f-4514-b143-7d783da9c506",
+  "question": "According to NVIDIA's 10-K, who competes with NVIDIA?",
+  "scorecard": {
+   "overall_score": 95.56,
+   "correctness_score": 86.67,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q01": {
+  "id": "af0f3235-87fc-4763-8545-bff53f037a45",
+  "question": "According to NVIDIA's 10-K, who supplies NVIDIA?",
+  "scorecard": {
+   "overall_score": 88.44,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q07": {
+  "id": "4b3b8924-b137-46b7-b18f-dee1e6da13e8",
+  "question": "According to Intel's 10-K, who is a sole-source supplier to Intel?",
+  "scorecard": {
+   "overall_score": 88.44,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q11": {
+  "id": "d062d8bb-0ad4-4657-a760-daf9f68db7c1",
+  "question": "According to Lam Research's 10-K, who competes with Lam?",
+  "scorecard": {
+   "overall_score": 92.89,
+   "correctness_score": 86.67,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q08": {
+  "id": "7abcfa10-13cf-4c76-a41a-05b8e752e548",
+  "question": "According to Intel's 10-K, who does Intel partner with?",
+  "scorecard": {
+   "overall_score": 88.44,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q09": {
+  "id": "1c8aefb8-efe9-40f9-b74c-6f424b817582",
+  "question": "According to Micron's 10-K, who competes with Micron?",
+  "scorecard": {
+   "overall_score": 88.44,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q10": {
+  "id": "8df50da3-0999-4e85-8f3a-fed81fb3f35a",
+  "question": "According to Lam Research's 10-K, who are Lam's most significant customers?",
+  "scorecard": {
+   "overall_score": 88.44,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q12": {
+  "id": "f8447a3b-06f3-4202-b24a-9c8a36d42329",
+  "question": "According to KLA's 10-K, who competes with KLA?",
+  "scorecard": {
+   "overall_score": 83.11,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 60.0,
+   "passed": false
+  }
+ },
+ "v2:q13": {
+  "id": "15012549-8b17-4547-9ffc-56fd34ac5b56",
+  "question": "According to KLA's 10-K, which customer exceeds 10% of revenue?",
+  "scorecard": {
+   "overall_score": 88.44,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q15": {
+  "id": "2464e4c4-d969-4ff4-a4d8-c1607bcc501c",
+  "question": "According to Qualcomm's 10-K, who are its primary foundry suppliers?",
+  "scorecard": {
+   "overall_score": 88.44,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q16": {
+  "id": "bad243c1-301b-49fe-86a9-ccf6bbbeb293",
+  "question": "According to Qualcomm's 10-K, which named customers each exceed 10% of revenue?",
+  "scorecard": {
+   "overall_score": 86.22,
+   "correctness_score": 66.67,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q14": {
+  "id": "c5009883-6641-41a7-a479-a23cdfe24bd1",
+  "question": "According to Entegris's 10-K, who is its top named customer?",
+  "scorecard": {
+   "overall_score": 80.89,
+   "correctness_score": 66.67,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 60.0,
+   "passed": false
+  }
+ },
+ "v2:q17": {
+  "id": "c8c6f526-6c60-4b76-be27-d4da997adb82",
+  "question": "According to Qualcomm's 10-K, who competes with Qualcomm?",
+  "scorecard": {
+   "overall_score": 95.56,
+   "correctness_score": 86.67,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q18": {
+  "id": "d7d6b543-c8a4-44d0-843a-39b098eaca3e",
+  "question": "According to HP Inc.'s 10-K, who supplies HP Inc.?",
+  "scorecard": {
+   "overall_score": 88.44,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q19": {
+  "id": "a210469e-377e-4d6a-8712-f0ce61abd2fe",
+  "question": "According to HP Inc.'s 10-K, who competes with HP Inc.?",
+  "scorecard": {
+   "overall_score": 92.89,
+   "correctness_score": 86.67,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q20": {
+  "id": "46dd4161-580f-4402-8507-9ab31afe27ba",
+  "question": "According to HPE's 10-K, who competes with HPE?",
+  "scorecard": {
+   "overall_score": 98.33,
+   "correctness_score": 93.33,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q21": {
+  "id": "0f78c153-4a1b-4532-b347-37d2ff2f868d",
+  "question": "According to HPE's 10-K, who are HPE's single-source suppliers?",
+  "scorecard": {
+   "overall_score": 91.33,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q24": {
+  "id": "87e30f1d-22a1-494d-92e3-d7c0cc6914fa",
+  "question": "According to Apple's 10-K, which listed company pays Apple licensing revenue?",
+  "scorecard": {
+   "overall_score": 91.33,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q23": {
+  "id": "e4e65565-d232-47b2-a247-e9aede528f49",
+  "question": "According to Supermicro's 10-K, who supplies Supermicro?",
+  "scorecard": {
+   "overall_score": 91.33,
+   "correctness_score": 73.33,
+   "efficiency_score": 80.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ },
+ "v2:q22": {
+  "id": "d0d57d9b-839f-463e-8b45-3df67919532f",
+  "question": "According to Supermicro's 10-K, who competes with Supermicro?",
+  "scorecard": {
+   "overall_score": 91.67,
+   "correctness_score": 66.67,
+   "efficiency_score": 100.0,
+   "safety_score": 100.0,
+   "robustness_score": 100.0,
+   "passed": true
+  }
+ }
+}

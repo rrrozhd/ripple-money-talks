@@ -1,0 +1,14 @@
+{
+ "reference_relationships": 196,
+ "recall_all": 0.30612244897959184,
+ "recall_known_companies": 0.9090909090909091,
+ "funnel": {
+  "found": 60,
+  "not_on_name_list": 130,
+  "name_known_but_sentence_not_extracted": 1,
+  "extracted_but_labelled_differently": 5
+ },
+ "graph_links": 111,
+ "graph_links_confirmed_by_reference": 60,
+ "labels_used": 281
+}

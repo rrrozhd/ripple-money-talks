@@ -1,0 +1,1556 @@
+{
+ "rag": {
+  "runs": 60,
+  "errors": 2,
+  "claims": 252,
+  "grounded_rate": 0.6428571428571429,
+  "runs_fully_grounded": 16,
+  "gold_questions": 24,
+  "gold_mean_f1": 0.8131944444444444,
+  "gold_beam_score": 0.7083333333333334,
+  "mean_seconds": 247.84310344827585,
+  "mean_tool_calls": 13.96551724137931,
+  "per_run": [
+   {
+    "id": "q01",
+    "grounded": 1.0,
+    "claims": 7,
+    "tool_calls": 3,
+    "seconds": 99.4,
+    "f1": 0.7499999999999999,
+    "beam": 0.5,
+    "precision": 0.6,
+    "recall": 1.0
+   },
+   {
+    "id": "q02",
+    "grounded": 0.875,
+    "claims": 8,
+    "tool_calls": 3,
+    "seconds": 82.3,
+    "f1": 0.7142857142857143,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.5555555555555556
+   },
+   {
+    "id": "q03",
+    "grounded": 0.0,
+    "claims": 4,
+    "tool_calls": 1,
+    "seconds": 48.7,
+    "f1": 0.8571428571428571,
+    "beam": 0.5,
+    "precision": 0.75,
+    "recall": 1.0
+   },
+   {
+    "id": "q04",
+    "grounded": 0.0,
+    "claims": 4,
+    "tool_calls": 10,
+    "seconds": 275.8,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q05",
+    "grounded": 0.8,
+    "claims": 5,
+    "tool_calls": 1,
+    "seconds": 45.3,
+    "f1": 0.5714285714285715,
+    "beam": 0.5,
+    "precision": 0.6666666666666666,
+    "recall": 0.5
+   },
+   {
+    "id": "q06",
+    "grounded": 0.8571428571428571,
+    "claims": 14,
+    "tool_calls": 1,
+    "seconds": 48.4,
+    "f1": 0.9166666666666666,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.8461538461538461
+   },
+   {
+    "id": "q07",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 1,
+    "seconds": 40.2,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q08",
+    "grounded": 0.7142857142857143,
+    "claims": 7,
+    "tool_calls": 4,
+    "seconds": 115.9,
+    "f1": 0.0,
+    "beam": 0.0,
+    "precision": 0.0,
+    "recall": 0.0
+   },
+   {
+    "id": "q09",
+    "grounded": 0.0,
+    "claims": 6,
+    "tool_calls": 1,
+    "seconds": 44.9,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q10",
+    "grounded": 0.0,
+    "claims": 4,
+    "tool_calls": 1,
+    "seconds": 53.3,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q11",
+    "grounded": 1.0,
+    "claims": 7,
+    "tool_calls": 1,
+    "seconds": 57.7,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q12",
+    "grounded": 1.0,
+    "claims": 5,
+    "tool_calls": 4,
+    "seconds": 162.1,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q13",
+    "grounded": 0.5,
+    "claims": 2,
+    "tool_calls": 7,
+    "seconds": 224.7,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q14",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 1,
+    "seconds": 33.8,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q15",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 1,
+    "seconds": 50.5,
+    "f1": 0.8,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.6666666666666666
+   },
+   {
+    "id": "q16",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 2,
+    "seconds": 89.8,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q17",
+    "grounded": 1.0,
+    "claims": 11,
+    "tool_calls": 2,
+    "seconds": 64.7,
+    "f1": 0.8571428571428571,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.75
+   },
+   {
+    "id": "q18",
+    "grounded": 0.0,
+    "claims": 4,
+    "tool_calls": 2,
+    "seconds": 62.3,
+    "f1": 0.7499999999999999,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.6
+   },
+   {
+    "id": "q21",
+    "grounded": 1.0,
+    "claims": 4,
+    "tool_calls": 1,
+    "seconds": 32.0,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q20",
+    "grounded": 1.0,
+    "claims": 6,
+    "tool_calls": 1,
+    "seconds": 43.1,
+    "f1": 0.5,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.3333333333333333
+   },
+   {
+    "id": "q22",
+    "grounded": 0.0,
+    "claims": 7,
+    "tool_calls": 2,
+    "seconds": 48.3,
+    "f1": 0.8,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.6666666666666666
+   },
+   {
+    "id": "q19",
+    "grounded": 1.0,
+    "claims": 16,
+    "tool_calls": 2,
+    "seconds": 57.0,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q23",
+    "grounded": 0.3333333333333333,
+    "claims": 3,
+    "tool_calls": 3,
+    "seconds": 70.8,
+    "f1": 0.0,
+    "beam": 0.0,
+    "precision": 0.0,
+    "recall": 0.0
+   },
+   {
+    "id": "q24",
+    "grounded": 0.0,
+    "claims": 1,
+    "tool_calls": 5,
+    "seconds": 84.8,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "t05",
+    "grounded": 1.0,
+    "claims": 11,
+    "tool_calls": 4,
+    "seconds": 129.7
+   },
+   {
+    "id": "t02",
+    "grounded": 1.0,
+    "claims": 9,
+    "tool_calls": 16,
+    "seconds": 232.9
+   },
+   {
+    "id": "t04",
+    "grounded": 1.0,
+    "claims": 13,
+    "tool_calls": 8,
+    "seconds": 227.5
+   },
+   {
+    "id": "t03",
+    "grounded": 0.4,
+    "claims": 5,
+    "tool_calls": 9,
+    "seconds": 283.6
+   },
+   {
+    "id": "t01",
+    "grounded": 0.0,
+    "claims": 2,
+    "tool_calls": 14,
+    "seconds": 338.1
+   },
+   {
+    "id": "t10",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 12,
+    "seconds": 301.5
+   },
+   {
+    "id": "t08",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 27,
+    "seconds": 393.0
+   },
+   {
+    "id": "t09",
+    "grounded": 0.0,
+    "claims": 3,
+    "tool_calls": 16,
+    "seconds": 433.2
+   },
+   {
+    "id": "t06",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 35,
+    "seconds": 652.7
+   },
+   {
+    "id": "t07",
+    "grounded": 0.0,
+    "claims": 1,
+    "tool_calls": 96,
+    "seconds": 732.1
+   },
+   {
+    "id": "t15",
+    "grounded": 0.0,
+    "claims": 1,
+    "tool_calls": 11,
+    "seconds": 296.5
+   },
+   {
+    "id": "t11",
+    "grounded": 0.0,
+    "claims": 2,
+    "tool_calls": 28,
+    "seconds": 710.2
+   },
+   {
+    "id": "t14",
+    "grounded": 0.8,
+    "claims": 5,
+    "tool_calls": 14,
+    "seconds": 369.0
+   },
+   {
+    "id": "t13",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 49,
+    "seconds": 420.8
+   },
+   {
+    "id": "t17",
+    "grounded": 0.4,
+    "claims": 5,
+    "tool_calls": 6,
+    "seconds": 114.9
+   },
+   {
+    "id": "t12",
+    "grounded": 0.0,
+    "claims": 3,
+    "tool_calls": 24,
+    "seconds": 548.2
+   },
+   {
+    "id": "t16",
+    "grounded": 0.0,
+    "claims": 2,
+    "tool_calls": 16,
+    "seconds": 290.3
+   },
+   {
+    "id": "t21",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 18,
+    "seconds": 192.3
+   },
+   {
+    "id": "t20",
+    "grounded": 0.2,
+    "claims": 5,
+    "tool_calls": 13,
+    "seconds": 259.3
+   },
+   {
+    "id": "t22",
+    "grounded": 1.0,
+    "claims": 10,
+    "tool_calls": 13,
+    "seconds": 262.5
+   },
+   {
+    "id": "t23",
+    "grounded": 0.5,
+    "claims": 2,
+    "tool_calls": 10,
+    "seconds": 226.3
+   },
+   {
+    "id": "t28",
+    "grounded": 0.5,
+    "claims": 2,
+    "tool_calls": 3,
+    "seconds": 89.9
+   },
+   {
+    "id": "t25",
+    "grounded": 0.0,
+    "claims": 2,
+    "tool_calls": 34,
+    "seconds": 315.8
+   },
+   {
+    "id": "t18",
+    "grounded": 0.0,
+    "claims": 1,
+    "tool_calls": 26,
+    "seconds": 579.2
+   },
+   {
+    "id": "t24",
+    "grounded": 0.0,
+    "claims": 3,
+    "tool_calls": 26,
+    "seconds": 672.3
+   },
+   {
+    "id": "t31",
+    "grounded": 0.0,
+    "claims": 1,
+    "tool_calls": 10,
+    "seconds": 268.8
+   },
+   {
+    "id": "t26",
+    "grounded": 0.0,
+    "claims": 1,
+    "tool_calls": 45,
+    "seconds": 587.9
+   },
+   {
+    "id": "t27",
+    "grounded": 0.0,
+    "claims": 3,
+    "tool_calls": 48,
+    "seconds": 607.3
+   },
+   {
+    "id": "t34",
+    "grounded": 1.0,
+    "claims": 6,
+    "tool_calls": 7,
+    "seconds": 171.0
+   },
+   {
+    "id": "t33",
+    "grounded": 0.25,
+    "claims": 4,
+    "tool_calls": 23,
+    "seconds": 265.3
+   },
+   {
+    "id": "t30",
+    "grounded": 0.2,
+    "claims": 5,
+    "tool_calls": 20,
+    "seconds": 538.5
+   },
+   {
+    "id": "t35",
+    "grounded": 0.0,
+    "claims": 2,
+    "tool_calls": 9,
+    "seconds": 177.7
+   },
+   {
+    "id": "t32",
+    "grounded": 0.75,
+    "claims": 8,
+    "tool_calls": 16,
+    "seconds": 363.3
+   },
+   {
+    "id": "t36",
+    "grounded": 0.0,
+    "claims": 2,
+    "tool_calls": 44,
+    "seconds": 387.5
+   }
+  ]
+ },
+ "v1-sonnet": {
+  "runs": 60,
+  "errors": 0,
+  "claims": 146,
+  "grounded_rate": 1.0,
+  "runs_fully_grounded": 40,
+  "gold_questions": 24,
+  "gold_mean_f1": 0.9085643523143524,
+  "gold_beam_score": 0.8125,
+  "mean_seconds": 55.059999999999995,
+  "mean_tool_calls": 4.133333333333334,
+  "per_run": [
+   {
+    "id": "q06",
+    "grounded": 1.0,
+    "claims": 9,
+    "tool_calls": 2,
+    "seconds": 25.8,
+    "f1": 0.8181818181818181,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.6923076923076923
+   },
+   {
+    "id": "q05",
+    "grounded": 1.0,
+    "claims": 4,
+    "tool_calls": 3,
+    "seconds": 28.1,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q04",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 4,
+    "seconds": 34.7,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q03",
+    "grounded": 1.0,
+    "claims": 4,
+    "tool_calls": 4,
+    "seconds": 39.8,
+    "f1": 0.8571428571428571,
+    "beam": 0.5,
+    "precision": 0.75,
+    "recall": 1.0
+   },
+   {
+    "id": "q02",
+    "grounded": 1.0,
+    "claims": 9,
+    "tool_calls": 3,
+    "seconds": 42.2,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q01",
+    "grounded": 1.0,
+    "claims": 7,
+    "tool_calls": 5,
+    "seconds": 44.1,
+    "f1": 0.7499999999999999,
+    "beam": 0.5,
+    "precision": 0.6,
+    "recall": 1.0
+   },
+   {
+    "id": "q07",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 4,
+    "seconds": 32.7,
+    "f1": 0.5,
+    "beam": 0.5,
+    "precision": 0.3333333333333333,
+    "recall": 1.0
+   },
+   {
+    "id": "q11",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 3,
+    "seconds": 24.1,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q08",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 5,
+    "seconds": 43.6,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q09",
+    "grounded": 1.0,
+    "claims": 6,
+    "tool_calls": 4,
+    "seconds": 38.5,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q10",
+    "grounded": 1.0,
+    "claims": 4,
+    "tool_calls": 4,
+    "seconds": 36.8,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q12",
+    "grounded": 1.0,
+    "claims": 5,
+    "tool_calls": 5,
+    "seconds": 39.4,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q13",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 4,
+    "seconds": 54.8,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q15",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 4,
+    "seconds": 53.5,
+    "f1": 0.8,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.6666666666666666
+   },
+   {
+    "id": "q16",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 6,
+    "seconds": 59.6,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q14",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 6,
+    "seconds": 66.6,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q17",
+    "grounded": 1.0,
+    "claims": 4,
+    "tool_calls": 3,
+    "seconds": 62.1,
+    "f1": 0.8571428571428571,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.75
+   },
+   {
+    "id": "q18",
+    "grounded": 1.0,
+    "claims": 6,
+    "tool_calls": 4,
+    "seconds": 58.9,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q19",
+    "grounded": 1.0,
+    "claims": 4,
+    "tool_calls": 3,
+    "seconds": 29.9,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q20",
+    "grounded": 1.0,
+    "claims": 7,
+    "tool_calls": 2,
+    "seconds": 59.1,
+    "f1": 0.923076923076923,
+    "beam": 0.5,
+    "precision": 0.8571428571428571,
+    "recall": 1.0
+   },
+   {
+    "id": "q21",
+    "grounded": 1.0,
+    "claims": 4,
+    "tool_calls": 4,
+    "seconds": 56.5,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q24",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 4,
+    "seconds": 49.2,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q23",
+    "grounded": 1.0,
+    "claims": 4,
+    "tool_calls": 4,
+    "seconds": 58.1,
+    "f1": 0.5,
+    "beam": 0.5,
+    "precision": 0.5,
+    "recall": 0.5
+   },
+   {
+    "id": "q22",
+    "grounded": 1.0,
+    "claims": 7,
+    "tool_calls": 6,
+    "seconds": 73.1,
+    "f1": 0.8,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.6666666666666666
+   },
+   {
+    "id": "t01",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 6,
+    "seconds": 91.6
+   },
+   {
+    "id": "t03",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 5,
+    "seconds": 53.0
+   },
+   {
+    "id": "t02",
+    "grounded": 1.0,
+    "claims": 2,
+    "tool_calls": 5,
+    "seconds": 64.8
+   },
+   {
+    "id": "t05",
+    "grounded": 1.0,
+    "claims": 11,
+    "tool_calls": 3,
+    "seconds": 57.5
+   },
+   {
+    "id": "t09",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 14.9
+   },
+   {
+    "id": "t04",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 5,
+    "seconds": 76.0
+   },
+   {
+    "id": "t08",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 3,
+    "seconds": 50.5
+   },
+   {
+    "id": "t06",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 5,
+    "seconds": 88.4
+   },
+   {
+    "id": "t14",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 15.0
+   },
+   {
+    "id": "t10",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 4,
+    "seconds": 58.6
+   },
+   {
+    "id": "t07",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 7,
+    "seconds": 78.7
+   },
+   {
+    "id": "t12",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 3,
+    "seconds": 46.6
+   },
+   {
+    "id": "t13",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 3,
+    "seconds": 24.3
+   },
+   {
+    "id": "t16",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 39.3
+   },
+   {
+    "id": "t17",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 39.1
+   },
+   {
+    "id": "t15",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 3,
+    "seconds": 54.7
+   },
+   {
+    "id": "t21",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 16.5
+   },
+   {
+    "id": "t18",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 6,
+    "seconds": 68.5
+   },
+   {
+    "id": "t20",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 5,
+    "seconds": 63.4
+   },
+   {
+    "id": "t11",
+    "grounded": 1.0,
+    "claims": 2,
+    "tool_calls": 8,
+    "seconds": 155.3
+   },
+   {
+    "id": "t26",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 15.1
+   },
+   {
+    "id": "t19",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 5,
+    "seconds": 125.1
+   },
+   {
+    "id": "t23",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 6,
+    "seconds": 73.9
+   },
+   {
+    "id": "t24",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 5,
+    "seconds": 64.5
+   },
+   {
+    "id": "t22",
+    "grounded": 1.0,
+    "claims": 9,
+    "tool_calls": 5,
+    "seconds": 83.0
+   },
+   {
+    "id": "t25",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 5,
+    "seconds": 70.7
+   },
+   {
+    "id": "t30",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 4,
+    "seconds": 50.5
+   },
+   {
+    "id": "t31",
+    "grounded": 1.0,
+    "claims": 2,
+    "tool_calls": 4,
+    "seconds": 53.5
+   },
+   {
+    "id": "t32",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 2,
+    "seconds": 16.1
+   },
+   {
+    "id": "t27",
+    "grounded": 1.0,
+    "claims": 2,
+    "tool_calls": 7,
+    "seconds": 73.7
+   },
+   {
+    "id": "t29",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 5,
+    "seconds": 93.3
+   },
+   {
+    "id": "t28",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 5,
+    "seconds": 97.3
+   },
+   {
+    "id": "t34",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 3,
+    "seconds": 48.1
+   },
+   {
+    "id": "t33",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 4,
+    "seconds": 57.0
+   },
+   {
+    "id": "t35",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 4,
+    "seconds": 59.1
+   },
+   {
+    "id": "t36",
+    "grounded": 1.0,
+    "claims": 2,
+    "tool_calls": 5,
+    "seconds": 54.8
+   }
+  ]
+ },
+ "v1": {
+  "runs": 60,
+  "errors": 2,
+  "claims": 153,
+  "grounded_rate": 0.8366013071895425,
+  "runs_fully_grounded": 25,
+  "gold_questions": 22,
+  "gold_mean_f1": 0.9018398268398269,
+  "gold_beam_score": 0.8181818181818182,
+  "mean_seconds": 174.7913793103448,
+  "mean_tool_calls": 7.327586206896552,
+  "per_run": [
+   {
+    "id": "q01",
+    "grounded": 1.0,
+    "claims": 5,
+    "tool_calls": 4,
+    "seconds": 105.1,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q03",
+    "grounded": 1.0,
+    "claims": 2,
+    "tool_calls": 2,
+    "seconds": 36.1,
+    "f1": 0.8,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.6666666666666666
+   },
+   {
+    "id": "q04",
+    "grounded": 1.0,
+    "claims": 5,
+    "tool_calls": 10,
+    "seconds": 161.5,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q05",
+    "grounded": 1.0,
+    "claims": 11,
+    "tool_calls": 2,
+    "seconds": 98.4,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q07",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 2,
+    "seconds": 45.9,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q08",
+    "grounded": 1.0,
+    "claims": 2,
+    "tool_calls": 3,
+    "seconds": 76.1,
+    "f1": 0.6666666666666666,
+    "beam": 0.5,
+    "precision": 0.5,
+    "recall": 1.0
+   },
+   {
+    "id": "q09",
+    "grounded": 0.0,
+    "claims": 6,
+    "tool_calls": 6,
+    "seconds": 244.3,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q10",
+    "grounded": 1.0,
+    "claims": 4,
+    "tool_calls": 2,
+    "seconds": 40.7,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q11",
+    "grounded": 1.0,
+    "claims": 7,
+    "tool_calls": 2,
+    "seconds": 65.9,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q12",
+    "grounded": 1.0,
+    "claims": 5,
+    "tool_calls": 3,
+    "seconds": 100.8,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q13",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 2,
+    "seconds": 49.4,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q14",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 2,
+    "seconds": 49.5,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q15",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 2,
+    "seconds": 49.4,
+    "f1": 0.8,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.6666666666666666
+   },
+   {
+    "id": "q16",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 2,
+    "seconds": 49.3,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q17",
+    "grounded": 1.0,
+    "claims": 11,
+    "tool_calls": 3,
+    "seconds": 138.0,
+    "f1": 0.8571428571428571,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.75
+   },
+   {
+    "id": "q18",
+    "grounded": 1.0,
+    "claims": 5,
+    "tool_calls": 2,
+    "seconds": 66.8,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q19",
+    "grounded": 1.0,
+    "claims": 10,
+    "tool_calls": 2,
+    "seconds": 80.4,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q21",
+    "grounded": 1.0,
+    "claims": 4,
+    "tool_calls": 2,
+    "seconds": 72.4,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "q22",
+    "grounded": 0.0,
+    "claims": 7,
+    "tool_calls": 2,
+    "seconds": 52.8,
+    "f1": 0.8,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.6666666666666666
+   },
+   {
+    "id": "q23",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 3,
+    "seconds": 122.9,
+    "f1": 0.0,
+    "beam": 0.0,
+    "precision": 0.0,
+    "recall": 0.0
+   },
+   {
+    "id": "q24",
+    "grounded": 0.0,
+    "claims": 1,
+    "tool_calls": 4,
+    "seconds": 49.0,
+    "f1": 1.0,
+    "beam": 1.0,
+    "precision": 1.0,
+    "recall": 1.0
+   },
+   {
+    "id": "t01",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 15,
+    "seconds": 405.6
+   },
+   {
+    "id": "t02",
+    "grounded": 1.0,
+    "claims": 2,
+    "tool_calls": 20,
+    "seconds": 480.2
+   },
+   {
+    "id": "t03",
+    "grounded": 0.0,
+    "claims": 1,
+    "tool_calls": 3,
+    "seconds": 37.3
+   },
+   {
+    "id": "t05",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 47.3
+   },
+   {
+    "id": "t06",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 57,
+    "seconds": 777.0
+   },
+   {
+    "id": "t07",
+    "grounded": 0.5,
+    "claims": 2,
+    "tool_calls": 21,
+    "seconds": 485.3
+   },
+   {
+    "id": "t08",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 101.0
+   },
+   {
+    "id": "t09",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 3,
+    "seconds": 190.6
+   },
+   {
+    "id": "t10",
+    "grounded": 0.3333333333333333,
+    "claims": 3,
+    "tool_calls": 9,
+    "seconds": 551.6
+   },
+   {
+    "id": "t11",
+    "grounded": 0.0,
+    "claims": 1,
+    "tool_calls": 44,
+    "seconds": 852.3
+   },
+   {
+    "id": "t12",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 35.2
+   },
+   {
+    "id": "t13",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 54.5
+   },
+   {
+    "id": "t14",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 21.2
+   },
+   {
+    "id": "t15",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 19.8
+   },
+   {
+    "id": "t16",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 50.9
+   },
+   {
+    "id": "t17",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 43.1
+   },
+   {
+    "id": "t18",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 109.7
+   },
+   {
+    "id": "t19",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 44.6
+   },
+   {
+    "id": "t20",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 125.8
+   },
+   {
+    "id": "t21",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 16.9
+   },
+   {
+    "id": "t22",
+    "grounded": 1.0,
+    "claims": 10,
+    "tool_calls": 5,
+    "seconds": 359.2
+   },
+   {
+    "id": "t23",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 11.1
+   },
+   {
+    "id": "t24",
+    "grounded": 0.0,
+    "claims": 3,
+    "tool_calls": 34,
+    "seconds": 754.4
+   },
+   {
+    "id": "t25",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 47,
+    "seconds": 798.4
+   },
+   {
+    "id": "t26",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 94.9
+   },
+   {
+    "id": "t27",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 20.5
+   },
+   {
+    "id": "t28",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 62.7
+   },
+   {
+    "id": "t29",
+    "grounded": 0.0,
+    "claims": 2,
+    "tool_calls": 31,
+    "seconds": 615.4
+   },
+   {
+    "id": "t30",
+    "grounded": 1.0,
+    "claims": 1,
+    "tool_calls": 5,
+    "seconds": 190.8
+   },
+   {
+    "id": "t31",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 39.9
+   },
+   {
+    "id": "t32",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 12.9
+   },
+   {
+    "id": "t33",
+    "grounded": 0.0,
+    "claims": 1,
+    "tool_calls": 5,
+    "seconds": 250.7
+   },
+   {
+    "id": "t34",
+    "grounded": 1.0,
+    "claims": 3,
+    "tool_calls": 6,
+    "seconds": 165.9
+   },
+   {
+    "id": "t35",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 3,
+    "seconds": 154.7
+   },
+   {
+    "id": "t36",
+    "grounded": null,
+    "claims": 0,
+    "tool_calls": 2,
+    "seconds": 48.3
+   },
+   {
+    "id": "q06",
+    "grounded": 1.0,
+    "claims": 13,
+    "tool_calls": 2,
+    "seconds": 100.3,
+    "f1": 0.9166666666666666,
+    "beam": 0.5,
+    "precision": 1.0,
+    "recall": 0.8461538461538461
+   },
+   {
+    "id": "t04",
+    "grounded": 1.0,
+    "claims": 13,
+    "tool_calls": 15,
+    "seconds": 253.2
+   }
+  ]
+ }
+}
