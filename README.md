@@ -16,3 +16,8 @@ Files: `data/ripple.duckdb` (tables: entity, sector, filing, revenue, claim, edg
 `data/raw/` (cached source files), `review.csv` (per-link verdicts with reasons).
 
 Set `SEC_USER_AGENT="Your Name you@example.com"` before downloading; SEC asks for a real contact.
+
+## Next.js frontend
+
+`frontend/` is a second UI (Next.js) on the same API as `web/`: ask the agent, explore the graph, compare versions.
+Start the API with `uv run uvicorn ripple.web:app --port 8000`, then see `frontend/README.md`.
